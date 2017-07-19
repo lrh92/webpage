@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "styles.css" />
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    <title>webpage</title>
+</head>
+<body>
+<h1>webpage</h1> 
+<p>GOOD DAY. WELCOME TO THIS PAGE. IT IS UNDER CONSTRUCTION
+</p>
+<div id="firstdiv">
+    <p>THIS IS AWESOME.</p>
+</div>
+<div class="red">
+<p>The difference between a div id and a div class is that the former must be unique, while the latter doesn't need to be.</p>
+</div>
+<div class="red">
+<h2>Some important facts:</h2>
+<ul>
+    <li>There must always be something in quotes after an equals sign.</li>
+    <li>The link to the stylesheet must always be inside the head element.</li>
+    <li>Every HTML document needs a head and a body. Like most people.</li> 
+</ul>
+</div>
+<div class="red">
+<h2>Every stylesheet link needs:</h2>
+<ol>
+    <li>A relationship: 'rel'.</li>
+    <li>A type: 'type'.</li>
+    <li>A hyperlink reference: 'href'.</li>  
+</ol>
+</div>
+<div class="red">
+<p>
+    You connect an HTML page to a backend server using <strong>AJAX</strong>, or by using <strong>AJAX with jQuery</strong>.
+</p>
+</div>
+<div>
+    <img src="images/owl.jpg" alt="twit twoo">
+</div>
+<div class="result">
+</div>
+<a href="https://github.com/lrh92/webpage" target="blank">HERE IS HOW YOU DO IT.</a>
+<script>
+    $(document).ready(function(){
+        console.log("ready!");
+        $.ajax({
+            url: "https://randomuser.me/api",
+            dataType: "json",
+            success: function(data){
+                $(".result").html(data);
+            }
+        })
+    });
+</script>
+</body>
+</html>
